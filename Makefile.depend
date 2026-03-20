@@ -1,0 +1,3 @@
+system-serial-number.o: system-serial-number.c
+	${CC} -c ${CFLAGS} system-serial-number.c
+
