@@ -32,8 +32,20 @@ int     main(int argc,char *argv[])
     }
     
     setuid(0);
-    return xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
+    xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
+                "dmidecode", "--string", "system-manufacturer", NULL);
+    xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
+                "dmidecode", "--string", "system-product-name", NULL);
+    xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
                 "dmidecode", "--string", "system-serial-number", NULL);
+    xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
+                "dmidecode", "--string", "system-uuid", NULL);
+    xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
+                "dmidecode", "--string", "processor-manufacturer", NULL);
+    xt_spawnlp(P_WAIT, P_NOECHO, NULL, NULL, NULL,
+                "dmidecode", "--string", "processor-version", NULL);
+    
+    return EX_OK;
 }
 
 
