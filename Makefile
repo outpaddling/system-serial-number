@@ -170,6 +170,8 @@ realclean: clean
 install: all
 	${MKDIR} -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${MANDIR}/man1
 	${INSTALL} -s -m 0755 ${BINS} ${DESTDIR}${PREFIX}/bin
+	# Add SUID bit
+	${CHMOD} 4755 ${DESTDIR}${PREFIX}/bin/${BIN1}
 	# ${INSTALL} -m 0644 Man/*.1 ${DESTDIR}${MANDIR}/man1
 
 install-strip: install
