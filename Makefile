@@ -48,13 +48,13 @@
 ############################################################################
 # Installed targets
 
-BIN1    = system-serial-number
+BIN1    = system-hardware-identification
 BINS    = ${BIN1}
 
 ############################################################################
 # List object files that comprise BIN.
 
-OBJS1   = system-serial-number.o
+OBJS1   = system-hardware-identification.o
 OBJS    = ${OBJS1}
 
 ############################################################################

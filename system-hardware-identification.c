@@ -1,6 +1,6 @@
 /***************************************************************************
  *  Description:
- *      Obtain the system serial number via dmidecode and SUID.
+ *      Obtain system system hardware info via dmidecode and SUID.
  *
  *  Arguments:
  *
